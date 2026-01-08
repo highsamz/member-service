@@ -1,11 +1,13 @@
 package br.com.member_service.domain.entity;
 
 import br.com.member_service.domain.enums.Sexo;
+import br.com.member_service.domain.enums.Status;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.UUID;
 
 @Entity
 @Table(name = "member")
@@ -13,8 +15,9 @@ import java.time.Period;
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(columnDefinition = "uuid")
+    private UUID id;
 
     private String nome;
     @Enumerated(EnumType.STRING)
@@ -40,6 +43,10 @@ public class Member {
 
     @Column(columnDefinition = "TEXT")
     private String observacoes;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Status status;
 
     // Idade não salva no banco (é calculada)
     @Transient

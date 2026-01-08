@@ -21,6 +21,7 @@ public class MemberMapper {
         m.setCpf(dto.cpf());
         m.setGruposMinisterios(dto.gruposMinisterios());
         m.setObservacoes(dto.observacoes());
+        m.setStatus(br.com.member_service.domain.enums.Status.ATIVO);
         return m;
     }
 

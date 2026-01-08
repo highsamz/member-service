@@ -5,7 +5,7 @@ import br.com.member_service.domain.enums.Sexo;
 import java.time.LocalDate;
 
 public record MemberResponseDTO(
-        Long id,
+        java.util.UUID id,
         String nome,
         Sexo sexo,
         LocalDate dataNascimento,
