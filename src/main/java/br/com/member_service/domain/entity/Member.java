@@ -48,7 +48,6 @@ public class Member {
     @Column(nullable = false)
     private Status status;
 
-    // Idade não salva no banco (é calculada)
     @Transient
     public Integer getIdade() {
         return (dataNascimento != null)

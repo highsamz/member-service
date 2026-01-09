@@ -1,7 +1,7 @@
 package br.com.member_service.application.mapper;
 
-import br.com.member_service.application.dto.request.MemberRequestDTO;
-import br.com.member_service.application.dto.response.MemberResponseDTO;
+import br.com.member_service.api.dto.request.MemberRequestDTO;
+import br.com.member_service.api.dto.response.MemberResponseDTO;
 import br.com.member_service.domain.entity.Member;
 import org.springframework.stereotype.Component;
 

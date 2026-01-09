@@ -1,4 +1,4 @@
-package br.com.member_service.application.dto.response;
+package br.com.member_service.api.dto.response;
 
 import br.com.member_service.domain.enums.Sexo;
 
